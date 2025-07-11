@@ -6,8 +6,8 @@ import json
 verify_bp = Blueprint("verify", __name__)
 processor = VoiceProcessor()
 
-DB_PATH = os.path.join(os.path.dirname(__file__), "../data/voiceprints.json")
-
+# DB_PATH = os.path.join(os.path.dirname(__file__), "../data/voiceprints.json")
+DB_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), "../data/voiceprints.json"))
 
 @verify_bp.route("/api/verify", methods=["POST"])
 def verify():

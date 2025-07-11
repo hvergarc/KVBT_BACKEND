@@ -32,6 +32,8 @@ def enroll():
     try:
         # Generar voiceprint
         voiceprint = processor.generate_voiceprint(temp_path)
+        voiceprint = voiceprint.tolist()  # ← convierte array NumPy a lista de floats JSON-safe
+
 
         # Guardar en "DB"
         with open(DB_PATH, "r") as f:
