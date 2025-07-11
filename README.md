@@ -51,7 +51,7 @@ Compara la voz enviada con la registrada previamente.
 #### Respuesta esperada:
 ```json
 {
-  "similarity": 0.89,
+  "similarity": 0.90,
   "success": true,
   "userId": "usuario123"
 }
@@ -71,14 +71,14 @@ Compara dos archivos de audio entre sí, sin necesidad de haber registrado previ
 #### Ejemplo en Postman:
 - Método: `POST`  
 - URL: `http://localhost:3000/api/verify`  
-- Body: `form-data`  
-  - `audio1`: `referencia.wav`  
+- Body: `form-data`  - `userId`: `usuario123`
+  - `userId`: `referencia.wav`  
   - `audio2`: `voz_a_validar.wav`
 
 #### Respuesta esperada:
 ```json
 {
-  "similarity": 0.89,
+  "similarity": 0.90,
   "success": true
 }
 ```
